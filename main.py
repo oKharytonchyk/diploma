@@ -45,9 +45,10 @@ def login():
                 return render_template('authLogin.html', myform=form)
             else:
                 session['login'] = login
-                return "U R logged in by cookie"
+                return render_template('loggedInByCookie.html')
+                # return "U R logged in by cookie"
         else:
-            return "U R logged in by session"
+            return render_template('loggedInBySession.html')
     if request.method == "POST":
         # form = request.form
         if not form.validate():
@@ -60,7 +61,8 @@ def login():
             if var == '200 OK':
                 session['login'] = request.form['login']
 
-                response = make_response("logged in")
+                response = make_response(render_template('loggedIn.html'))
+                # response = make_response("logged in")
                 expire_date = datetime.datetime.now()
                 expire_date = expire_date + datetime.timedelta(days=90)
                 response.set_cookie("loginCookie", value=request.form["login"], expires=expire_date)
@@ -100,14 +102,16 @@ def registration():
             if var == "200 OK":
                 session['login'] = request.form['login']
 
-                response = make_response("U R registered")
+                response = make_response(render_template('registered.html'))
+                # response = make_response("U R registered")
                 expire_date = datetime.datetime.now()
                 expire_date = expire_date + datetime.timedelta(days=90)
                 response.set_cookie("loginCookie", value=request.form["login"], expires=expire_date)
 
                 return response
             else:
-                response = make_response(var)
+                response = make_response(render_template('registered.html', var=var))
+                # response = make_response(var)
                 return response
 
 
