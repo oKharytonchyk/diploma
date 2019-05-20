@@ -200,11 +200,6 @@ def placesCreate():
 @app.route('/placesRead', methods=["GET", "POST"])
 def placesRead():
     form = PlaceReadForm()
-    place = Place()
-    place.__enter__()
-    # form.combobox_id.choices = [(1, 2), (2, 3), (3, 4), (4, 5)]
-    # form.combobox_id.choices = [(1, place.get_places_id())]
-    form.combobox_id.choices = place.get_places_id()
 
     if request.method == "GET":
         return render_template('placesRead.html', placeForm=form)
@@ -212,13 +207,16 @@ def placesRead():
         if not form.validate():
             return render_template('placesRead.html', placeForm=form)
         else:
-            # if form.combobox_id.data == "":
-            if request.form['combobox_id'] == "":
+            place = Place()
+            place.__enter__()
+            if request.form['select_place_id'] == "":
+                # if request.form['combobox_id'] == "":
                 var = place.get_places()
             else:
-                # var = place.get_place(form.combobox_id.data)
-                var = place.get_place(request.form['combobox_id'])
-            return render_template('placesRead.html', selectedPlaces=var, placeForm=form)
+                var = place.get_place(request.form['select_place_id'])
+                # var = place.get_place(request.form['combobox_id'])
+            return render_template('placesRead.html', selectedPlaces=var, placeForm=form,
+                                   selectedPlaces_info=zip(var, range(0, len(var))))
 
 
 @app.route('/placesUpdate', methods=["GET", "POST"])
@@ -292,7 +290,8 @@ def statusesRead():
                 var = status.get_statuses()
             else:
                 var = status.get_status(request.form['select_status'])
-            return render_template('statusesRead.html', selectedStatuses=var, statusForm=form)
+            return render_template('statusesRead.html', selectedStatuses=var, statusForm=form,
+                                   selectedStatuses_info=zip(var, range(0, len(var))))
 
 
 @app.route('/statusesUpdate', methods=["GET", "POST"])

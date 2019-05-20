@@ -25,8 +25,8 @@ class PlaceCreateForm(Form):
 
 
 class PlaceReadForm(Form):
-    select_place_id = StringField("Select place with id : ")
-    combobox_id = SelectField(id='select_combobox_id')
+    select_place_id = StringField("Select place with id ")
+    # combobox_id = SelectField(id='select_combobox_id')
     # combobox_id = SelectField(coerce=int)
     # combobox_id = SelectField("Select place id : ", choices=[(1, 2)])
     submit = SubmitField("Select one or all places")
