@@ -86,9 +86,11 @@ def registration():
                 return render_template('authRegistration.html', regForm=form)
             else:
                 session['login'] = login
-                return "U R logged in by cookie"
+                return render_template('loggedInByCookie.html')
+                # return "U R logged in by cookie"
         else:
-            return "U R logged in by session"
+            return render_template('loggedInBySession.html')
+            # return "U R logged in by session"
     if request.method == "POST":
         # form = request.form
         if not form.validate():
