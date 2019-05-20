@@ -133,7 +133,7 @@ def usersRead():
             else:
                 var = user.get_user(request.form['select_login'])
             return render_template('usersRead.html', selectedUsers=var, userForm=form,
-                                   selectedUsers_info=zip(var, range(1, len(var))))
+                                   selectedUsers_info=zip(var, range(0, len(var))))
 
 
 @app.route('/usersUpdate', methods=["GET", "POST"])
