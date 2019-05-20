@@ -1,14 +1,36 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Places</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/floating-labels.css">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 </head>
 <body>
-<a href="/">Home page</a><br><br><br>
-<a href="/placesCreate">Places create</a><br>
-<a href="/placesRead">Places read</a><br>
-<a href="/placesUpdate">Places update</a><br>
-<a href="/placesDelete">Places delete</a><br>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Home page</a>
+</nav>
+<br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/placesCreate" role="button">Places create</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/placesRead" role="button">Places read</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/placesUpdate" role="button">Places update</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/placesDelete" role="button">Places delete</a></p>
+        </div>
+    </div>
+    <hr>
+</div>
+
 </body>
 </html>

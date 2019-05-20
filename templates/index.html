@@ -1,18 +1,48 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Home Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/floating-labels.css">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 </head>
 <body>
-<a href="/auth">Authorization</a><br><br><br>
-<a href="/users">Users</a><br>
-<a href="/statuses">Statuses</a><br>
-<a href="/places">Places</a><br>
-<a href="/events">Events</a><br><br>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/auth">Authorization</a>
+</nav>
+<br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/users" role="button">Users</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/statuses" role="button">Statuses</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/places" role="button">Places</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/events" role="button">Events</a></p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/createdEvents" role="button">Created events</a></p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm">
+            <p><a class="btn btn-success" href="/queues" role="button">Queues</a></p>
+        </div>
+    </div>
+    <hr>
+</div>
 
-<a href="/createdEvents">Created events</a><br><br>
-
-<a href="/queues">Queues</a><br>
 </body>
 </html>
