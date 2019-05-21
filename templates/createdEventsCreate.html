@@ -142,18 +142,18 @@
             {{createdEventForm.submit(class_="btn btn-lg btn-success btn-block")}}
         </form>
     </div>
-    {%if error != null%}
     <div class="d-flex flex-column">
         <p class="mt-5 mb-3 text-center">Creation status : {{creationStatus}}</p>
+        {%if createdEventForm.errors %}
         <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
             {% for field in createdEventForm.errors %}
             {% for error in createdEventForm.errors[field] %}
-            {{error}}
+            {{error}}<br>
             {% endfor %}
             {% endfor %}
         </div>
+        {%endif%}
     </div>
-    {%endif%}
 </div>
 </body>
 </html>

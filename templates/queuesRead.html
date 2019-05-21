@@ -193,41 +193,18 @@
         <br/>
         <br/>
         {%endif%}
-        <!--@ok TODO либо этот эндиф опустить под </div>-->
     </div>
-    <div>
+    <div class="d-flex flex-column">
+        {%if queueForm.errors %}
+        <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
+            {% for field in queueForm.errors %}
+            {% for error in queueForm.errors[field] %}
+            {{error}}<br>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        {%endif%}
     </div>
-
-    <!--<div>-->
-    <!--Events list :<br>-->
-    <!--{%for row in selectedCreatedEvents%}-->
-    <!--{{row}}<br>-->
-    <!--{%endfor%}-->
-    <!--</div>-->
-
-    {%if error %}
-    <h2>Error list :</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>error</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!--Error list : {{queueForm.errors}}-->
-            {%for error in selectedQueues.errors%}
-            <tr>
-                <!--@ok не факт шо пашет TODO-->
-                <td>{{error.index}}</td>
-                <td>{{error}}</td>
-            </tr>
-            {%endfor%}
-            </tbody>
-        </table>
-    </div>
-    {%endif%}
 </div>
 
 </body>

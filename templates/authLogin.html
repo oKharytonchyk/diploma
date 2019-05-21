@@ -159,48 +159,57 @@
     <a class="navbar-brand" href="/">Home page</a>
 </nav>
 <!-- need myform is instance of UserLoginForm-->
-<form class="form-signin" action="/auth/login" method="POST">
-    <div class="text-center mb-4">
-        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-        <p>
-            Welcome back to our electronic queue!
+<div class="container">
+    <form class="form-signin" action="/auth/login" method="POST">
+        <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+            <p>
+                Welcome back to our electronic queue!
+            </p>
+        </div>
+        {{myform.hidden_tag()}}
+        <div class="form-label-group">
+            {{myform.login(class_="form-control", placeholder='{{myform.login.label}}')}}
+            {{myform.login.label(for="login")}}
+        </div>
+        <div class="form-label-group">
+            {{myform.password(class_="form-control", type="password", placeholder='{{myform.password.label}}')}}
+            {{myform.password.label(for="password")}}
+        </div>
+        {{myform.submit(class_="btn btn-lg btn-primary btn-block")}}
+        <p class="mt-5 mb-3 text-center">If you are <code>NOT</code> registered you can do it
+            <a href="/auth/registration">now!</a>
         </p>
-    </div>
-    {{myform.hidden_tag()}}
-    <div class="form-label-group">
-        {{myform.login(class_="form-control", placeholder='{{myform.login.label}}')}}
-        {{myform.login.label(for="login")}}
-    </div>
-    <div class="form-label-group">
-        {{myform.password(class_="form-control", type="password", placeholder='{{myform.password.label}}')}}
-        {{myform.password.label(for="password")}}
-    </div>
-    {{myform.submit(class_="btn btn-lg btn-primary btn-block")}}
-    <p class="mt-5 mb-3 text-center">If you are <code>NOT</code> registered you can do it
-        <a href="/auth/registration">now!</a>
-    </p>
-    <p class="mt-5 mb-3 text-muted text-center">&copy; 2019 - Oleksandr Kharytonchyk. All rights reserved.</p>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2019 - Oleksandr Kharytonchyk. All rights reserved.</p>
 
-    <div>
-        Error list : {{myform.errors}}
-        <!--{%for error in myform.errors%}-->
-        <!--{{error}}-->
-        <!--{%endfor%}-->
-    </div>
+        <div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <!-- // @ok TODO тут можно убрать пхд-->
 
-    <div>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul class=flashes>
-            {% for message in messages %}
-            <li>{{ message }}</li>
+    </form>
+
+    <div class="d-flex flex-column">
+        {%if myform.errors %}
+        <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
+            {% for field in myform.errors %}
+            {% for error in myform.errors[field] %}
+            {{error}}<br>
             {% endfor %}
-        </ul>
-        {% endif %}
-        {% endwith %}
+            {% endfor %}
+        </div>
+        {%endif%}
     </div>
+</div>
 
-</form>
 </body>
 </html>
 

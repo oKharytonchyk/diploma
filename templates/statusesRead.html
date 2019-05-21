@@ -136,7 +136,7 @@
     <br/>
     <br/>
     <div class="d-flex flex-column">
-    {%if selectedStatuses != null %}
+        {%if selectedStatuses != null %}
         <h2>Statuses list :</h2>
         <div class="table-responsive">
             <table class="table table-striped table-sm">
@@ -158,42 +158,20 @@
         </div>
         <br/>
         <br/>
-    {%endif%}
-        <!--@ok TODO либо этот эндиф опустить под </div>-->
+        {%endif%}
     </div>
-    <div>
+    <div class="d-flex flex-column">
+        {%if statusForm.errors %}
+        <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
+            {% for field in statusForm.errors %}
+            {% for error in statusForm.errors[field] %}
+            {{error}}<br>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        {%endif%}
     </div>
 
-<!--<div>-->
-    <!--Status list :<br>-->
-    <!--{%for row in selectedStatuses%}-->
-    <!--{{row}}<br>-->
-    <!--{%endfor%}-->
-<!--</div>-->
-
-    {%if error %}
-    <h2>Error list :</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>error</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!--Error list : {{statusForm.errors}}-->
-            {%for error in statusForm.errors%}
-            <tr>
-                <!--@ok не факт шо пашет TODO-->
-                <td>{{error.index}}</td>
-                <td>{{error}}</td>
-            </tr>
-            {%endfor%}
-            </tbody>
-        </table>
-    </div>
-    {%endif%}
 </div>
 
 </body>

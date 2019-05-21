@@ -144,40 +144,16 @@
     </div>
     <div class="d-flex flex-column">
         <p class="mt-5 mb-3 text-center">Deletion status : {{deletionStatus}}</p>
+        {%if createdEventForm.errors %}
+        <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
+            {% for field in createdEventForm.errors %}
+            {% for error in createdEventForm.errors[field] %}
+            {{error}}<br>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        {%endif%}
     </div>
-    {%if error %}
-    <h2>Error list :</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>error</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!--Error list : {{createdEventForm.errors}}-->
-            {%for error in createdEventForm.errors%}
-            <tr>
-                <!--@ok не факт шо пашет TODO-->
-                <td>{{error.index}}</td>
-                <td>{{error}}</td>
-            </tr>
-            {%endfor%}
-            </tbody>
-        </table>
-    </div>
-    {%endif%}
 </div>
-
-<!--@ok TODO кооменты могут работать-->
-<!--<div>-->
-<!--&lt;!&ndash;error section&ndash;&gt;-->
-<!--Error list : {{createdEventForm.errors}}-->
-<!--&lt;!&ndash;{%for error in createdEventForm.errors%}&ndash;&gt;-->
-<!--&lt;!&ndash;{{error}}&ndash;&gt;-->
-<!--&lt;!&ndash;{%endfor%}&ndash;&gt;-->
-<!--</div>-->
-
 </body>
 </html>

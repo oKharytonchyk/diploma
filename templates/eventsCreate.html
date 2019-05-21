@@ -137,7 +137,7 @@
         <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
             {% for field in eventForm.errors %}
             {% for error in eventForm.errors[field] %}
-            {{error}}
+            {{error}}<br>
             {% endfor %}
             {% endfor %}
         </div>

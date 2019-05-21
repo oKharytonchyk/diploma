@@ -159,7 +159,7 @@
         <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
             {% for field in queueForm.errors %}
             {% for error in queueForm.errors[field] %}
-            {{error}}
+            {{error}}<br>
             {% endfor %}
             {% endfor %}
         </div>

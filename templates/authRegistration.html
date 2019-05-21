@@ -148,37 +148,44 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="/">Home page</a>
 </nav>
-<form class="form-signin" action="/auth/registration" method="POST">
-    <div class="text-center mb-4">
-        <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
-        <p>
-            We are always happy to our newcomers!
-        </p>
-    </div>
-    {{regForm.hidden_tag()}}
-    <div class="form-label-group">
-        {{regForm.login(class_="form-control", placeholder='{{regForm.login.label}}')}}
-        {{regForm.login.label(for="login")}}
-    </div>
-    <div class="form-label-group">
-        {{regForm.password(class_="form-control", type="password", placeholder='{{regForm.password.label}}')}}
-        {{regForm.password.label(for="password")}}
-    </div>
-    <div class="form-label-group">
-        {{regForm.email(class_="form-control", type="email", placeholder='{{regForm.email.label}}')}}
-        {{regForm.email.label(for="email")}}
-    </div>
-    {{regForm.submit(class_="btn btn-lg btn-primary btn-block")}}
-    <p class="mt-5 mb-3 text-muted text-center">&copy; 2019 - Oleksandr Kharytonchyk. All rights reserved.</p>
+<div class="container">
+    <form class="form-signin" action="/auth/registration" method="POST">
+        <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+            <p>
+                We are always happy to our newcomers!
+            </p>
+        </div>
+        {{regForm.hidden_tag()}}
+        <div class="form-label-group">
+            {{regForm.login(class_="form-control", placeholder='{{regForm.login.label}}')}}
+            {{regForm.login.label(for="login")}}
+        </div>
+        <div class="form-label-group">
+            {{regForm.password(class_="form-control", type="password", placeholder='{{regForm.password.label}}')}}
+            {{regForm.password.label(for="password")}}
+        </div>
+        <div class="form-label-group">
+            {{regForm.email(class_="form-control", type="email", placeholder='{{regForm.email.label}}')}}
+            {{regForm.email.label(for="email")}}
+        </div>
+        {{regForm.submit(class_="btn btn-lg btn-primary btn-block")}}
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2019 - Oleksandr Kharytonchyk. All rights reserved.</p>
 
-    <div>
-        Error list : {{regForm.errors}}
-        <!--{%for error in regForm.errors%}-->
-        <!--{{error}}-->
-        <!--{%endfor%}-->
-    </div>
+    </form>
 
-</form>
+    <div class="d-flex flex-column">
+        {%if regForm.errors %}
+        <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
+            {% for field in regForm.errors %}
+            {% for error in regForm.errors[field] %}
+            {{error}}<br>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        {%endif%}
+    </div>
+</div>
 </body>
 </html>
 
