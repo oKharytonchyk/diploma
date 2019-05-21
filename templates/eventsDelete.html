@@ -1,33 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Events delete</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .form-signin {
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+            margin: auto;
+        }
+
+        .form-label-group {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .form-label-group > input,
+        .form-label-group > label {
+            height: 3.125rem;
+            padding: .75rem;
+        }
+
+        .form-label-group > label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            margin-bottom: 0; /* Override default `<label>` margin */
+            line-height: 1.5;
+            color: #495057;
+            pointer-events: none;
+            cursor: text; /* Match the input under the label */
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            transition: all .1s ease-in-out;
+        }
+
+        .form-label-group input::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input:-ms-input-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input::-ms-input-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input::-moz-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input::placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input:not(:placeholder-shown) {
+            padding-top: 1.25rem;
+            padding-bottom: .25rem;
+        }
+
+        .form-label-group input:not(:placeholder-shown) ~ label {
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Fallback for Edge
+        -------------------------------------------------- */
+        @supports (-ms-ime-align: auto) {
+            .form-label-group > label {
+                display: none;
+            }
+
+            .form-label-group input::-ms-input-placeholder {
+                color: #777;
+            }
+        }
+
+        /* Fallback for IE
+        -------------------------------------------------- */
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .form-label-group > label {
+                display: none;
+            }
+
+            .form-label-group input:-ms-input-placeholder {
+                color: #777;
+            }
+        }
+    </style>
 </head>
 <body>
-<form action="/eventsDelete" method="POST">
-    <a href="/">Home page</a><br>
-    <a href="/events">Events</a><br><br><br>
-    {{eventForm.hidden_tag()}}
-
-    {{eventForm.delete_event.label}}{{eventForm.delete_event}}<br/>
-
-    {{eventForm.submit}}
-</form>
-
-<div>
-    Error list : {{eventForm.errors}}
-    <!--{%for error in eventForm.errors%}-->
-    <!--{{error}}-->
-    <!--{%endfor%}-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Home page</a>
+    <a class="navbar-brand" href="/events">Events</a>
+</nav>
+<div class="container">
+    <div class="form-signin">
+        <form class="container" action="/eventsDelete" method="POST">
+            {{eventForm.hidden_tag()}}
+            <div class="form-label-group">
+                {{eventForm.delete_event(class_="form-control", placeholder='{{eventForm.delete_event.label}}')}}
+                {{eventForm.delete_event.label(for="delete_event")}}
+            </div>
+            {{eventForm.submit(class_="btn btn-lg btn-success btn-block")}}
+        </form>
+    </div>
+    <div class="d-flex flex-column">
+        <p class="mt-5 mb-3 text-center">Deletion status : {{deletionStatus}}</p>
+    </div>
+    {%if error %}
+    <h2>Error list :</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>error</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--Error list : {{eventForm.errors}}-->
+            {%for error in eventForm.errors%}
+            <tr>
+                <!--@ok не факт шо пашет TODO-->
+                <td>{{error.index}}</td>
+                <td>{{error}}</td>
+            </tr>
+            {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    {%endif%}
 </div>
 
-<div>
-    Deletion status :<br>
-    {{deletionStatus}}
-    <!--{%for row in creationStatus%}-->
-    <!--{{row}}<br>-->
-    <!--{%endfor%}-->
-</div>
+<!--@ok TODO кооменты могут работать-->
+<!--<div>-->
+<!--&lt;!&ndash;error section&ndash;&gt;-->
+<!--Error list : {{eventForm.errors}}-->
+<!--&lt;!&ndash;{%for error in eventForm.errors%}&ndash;&gt;-->
+<!--&lt;!&ndash;{{error}}&ndash;&gt;-->
+<!--&lt;!&ndash;{%endfor%}&ndash;&gt;-->
+<!--</div>-->
+
 </body>
 </html>
