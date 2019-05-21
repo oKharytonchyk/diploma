@@ -4,9 +4,14 @@
     <list default="true" id="0888ad7d-7c3d-41e0-8e9f-6685531696f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/placesRead.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/placesRead.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/statusesRead.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/statusesRead.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/createdEventsRead.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createdEventsRead.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventsRead.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventsRead.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/queuesRead.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/queuesRead.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wtf/form/createdEvents.py" beforeDir="false" afterPath="$PROJECT_DIR$/wtf/form/createdEvents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wtf/form/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/wtf/form/events.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wtf/form/places.py" beforeDir="false" afterPath="$PROJECT_DIR$/wtf/form/places.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wtf/form/queues.py" beforeDir="false" afterPath="$PROJECT_DIR$/wtf/form/queues.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wtf/form/statuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/wtf/form/statuses.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +21,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/FLASKSESSION2$func.coverage" NAME="func Coverage Results" MODIFIED="1543839127864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wtf" />
-    <SUITE FILE_PATH="coverage/FLASKSESSION2$main.coverage" NAME="main Coverage Results" MODIFIED="1558377941253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wtf" />
+    <SUITE FILE_PATH="coverage/FLASKSESSION2$main.coverage" NAME="main Coverage Results" MODIFIED="1558454348682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wtf" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -72,7 +77,7 @@
     <session id="-1750186156">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="32" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="5" />
@@ -87,9 +92,9 @@
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -100,8 +105,8 @@
           <entry key="QUEUE" value="2" />
           <entry key="SUPERUSER" value="11" />
           <entry key="css" value="6" />
-          <entry key="html" value="209" />
-          <entry key="py" value="105" />
+          <entry key="html" value="214" />
+          <entry key="py" value="112" />
           <entry key="sql" value="101" />
           <entry key="txt" value="1" />
           <entry key="xml" value="1" />
@@ -111,9 +116,9 @@
         <counts>
           <entry key="CSS" value="6" />
           <entry key="Database Element" value="22" />
-          <entry key="HTML" value="209" />
+          <entry key="HTML" value="214" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="105" />
+          <entry key="Python" value="112" />
           <entry key="SQL" value="96" />
           <entry key="Scratch" value="5" />
           <entry key="XML" value="1" />
@@ -123,18 +128,18 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="dummy" value="8" />
-          <entry key="html" value="3321" />
-          <entry key="py" value="6462" />
+          <entry key="html" value="3527" />
+          <entry key="py" value="6465" />
           <entry key="sql" value="918" />
-          <entry key="txt" value="98" />
+          <entry key="txt" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="3321" />
-          <entry key="PLAIN_TEXT" value="106" />
-          <entry key="Python" value="6461" />
+          <entry key="HTML" value="3527" />
+          <entry key="PLAIN_TEXT" value="134" />
+          <entry key="Python" value="6464" />
           <entry key="SQL" value="140" />
           <entry key="Scratch" value="779" />
         </counts>
@@ -149,50 +154,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-487">
-              <caret line="204" selection-start-line="204" selection-end-line="204" />
+            <state relative-caret-position="696">
+              <caret line="562" lean-forward="true" selection-start-line="562" selection-end-line="562" />
               <folding>
                 <element signature="e#0#99#0" expanded="true" />
-                <marker date="1558378320000" expanded="true" signature="411:803" ph="..." />
-                <marker date="1558378320000" expanded="true" signature="4143:24725" ph="..." />
-                <marker date="1558378320000" expanded="true" signature="4959:4962" ph="..." />
+                <marker date="1558456442000" expanded="true" signature="411:803" ph="..." />
+                <marker date="1558456442000" expanded="true" signature="4143:24987" ph="..." />
+                <marker date="1558456442000" expanded="true" signature="4959:4962" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wtf/form/places.py">
+        <entry file="file://$PROJECT_DIR$/templates/eventsRead.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+            <state relative-caret-position="475">
+              <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/authRegistration.html">
+        <entry file="file://$PROJECT_DIR$/templates/createdEventsRead.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="176" column="24" lean-forward="true" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+            <state relative-caret-position="178">
+              <caret line="158" column="24" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="43" />
               <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/usersRead.html">
+        <entry file="file://$PROJECT_DIR$/templates/events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="166" column="10" lean-forward="true" selection-end-line="193" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="730">
+              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -200,38 +202,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/statusesRead.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="117" column="6" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+            <state relative-caret-position="-302">
+              <caret line="117" column="6" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
               <folding>
-                <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/statusesDelete.html">
+        <entry file="file://$PROJECT_DIR$/wtf/form/users.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+            <state relative-caret-position="984">
+              <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/queuesRead.html">
+        <entry file="file://$PROJECT_DIR$/wtf/form/statuses.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+              <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/placesRead.html">
+        <entry file="file://$PROJECT_DIR$/templates/queuesRead.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
+            <state relative-caret-position="384">
+              <caret line="175" selection-start-line="175" selection-end-line="175" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
               </folding>
@@ -240,25 +245,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/usersUpdate.html">
+        <entry file="file://$PROJECT_DIR$/wtf/form/queues.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/usersDelete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="150" column="41" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="37" column="19" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -275,13 +265,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{%</find>
-      <find>for</find>
-      <find>body</find>
-      <find>body {</find>
-      <find>albu</find>
-      <find>usersread</find>
-      <find>!=</find>
       <find>if not</find>
       <find>==</find>
       <find>/log</find>
@@ -300,11 +283,18 @@
       <find>placesre</find>
       <find>placesrea</find>
       <find>place</find>
-      <find>select_status</find>
-      <find>select_place_id</find>
-      <find>placeForm</find>
-      <find>form</find>
       <find>if not form.validate():</find>
+      <find>form</find>
+      <find>placeForm</find>
+      <find>eventsread</find>
+      <find>eventForm</find>
+      <find>queuesread</find>
+      <find>createdEventForm</find>
+      <find>select_place_id</find>
+      <find>select_event_name</find>
+      <find>select_date_creation_event</find>
+      <find>select_status</find>
+      <find>select_date_request_creation</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Учеба\КПИ\4 курс\FLASKSESSION2</dir>
@@ -325,21 +315,14 @@
         <option value="$PROJECT_DIR$/wtf/form/login.py" />
         <option value="$PROJECT_DIR$/wtf/form/registration.py" />
         <option value="$PROJECT_DIR$/templates/placesCreate.html" />
-        <option value="$PROJECT_DIR$/templates/queuesRead.html" />
         <option value="$PROJECT_DIR$/templates/statusesCreate.html" />
         <option value="$PROJECT_DIR$/templates/placesUpdate.html" />
         <option value="$PROJECT_DIR$/templates/statusesUpdate.html" />
         <option value="$PROJECT_DIR$/templates/eventsCreate.html" />
         <option value="$PROJECT_DIR$/templates/eventsUpdate.html" />
         <option value="$PROJECT_DIR$/templates/eventsDelete.html" />
-        <option value="$PROJECT_DIR$/templates/eventsRead.html" />
         <option value="$PROJECT_DIR$/templates/createdEventsDelete.html" />
-        <option value="$PROJECT_DIR$/templates/createdEventsRead.html" />
-        <option value="$PROJECT_DIR$/wtf/form/events.py" />
-        <option value="$PROJECT_DIR$/wtf/form/statuses.py" />
-        <option value="$PROJECT_DIR$/wtf/form/queues.py" />
         <option value="$PROJECT_DIR$/templates/createdEventsUpdate.html" />
-        <option value="$PROJECT_DIR$/wtf/form/createdEvents.py" />
         <option value="$PROJECT_DIR$/templates/createdEventsCreate.html" />
         <option value="$PROJECT_DIR$/DAO.py" />
         <option value="$PROJECT_DIR$/templates/css/floating-labels.css" />
@@ -353,7 +336,6 @@
         <option value="$PROJECT_DIR$/templates/loggedIn.html" />
         <option value="$PROJECT_DIR$/templates/registered.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/events.html" />
         <option value="$PROJECT_DIR$/templates/places.html" />
         <option value="$PROJECT_DIR$/templates/statuses.html" />
         <option value="$PROJECT_DIR$/templates/users.html" />
@@ -364,9 +346,17 @@
         <option value="$PROJECT_DIR$/templates/usersDelete.html" />
         <option value="$PROJECT_DIR$/templates/statusesRead.html" />
         <option value="$PROJECT_DIR$/templates/statusesDelete.html" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/wtf/form/places.py" />
         <option value="$PROJECT_DIR$/templates/placesRead.html" />
+        <option value="$PROJECT_DIR$/wtf/form/statuses.py" />
+        <option value="$PROJECT_DIR$/wtf/form/queues.py" />
+        <option value="$PROJECT_DIR$/wtf/form/places.py" />
+        <option value="$PROJECT_DIR$/wtf/form/events.py" />
+        <option value="$PROJECT_DIR$/wtf/form/createdEvents.py" />
+        <option value="$PROJECT_DIR$/templates/events.html" />
+        <option value="$PROJECT_DIR$/templates/createdEventsRead.html" />
+        <option value="$PROJECT_DIR$/templates/eventsRead.html" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/templates/queuesRead.html" />
       </list>
     </option>
   </component>
@@ -388,6 +378,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -421,7 +412,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -570,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558375764803</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add places and statuses read">
+      <created>1558378652845</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558378652845</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -586,7 +583,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5105008" visible="true" weight="0.19402985" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5105008" visible="true" weight="0.16950959" />
       <window_info id="Favorites" order="1" sideWeight="0.48949918" side_tool="true" weight="0.17537314" />
       <window_info id="Structure" order="2" sideWeight="0.48698482" side_tool="true" weight="0.20042644" />
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.329718" />
@@ -598,7 +595,7 @@
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49946696" weight="0.3286334" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49840087" visible="true" weight="0.3329718" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49840087" weight="0.3329718" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.329718" />
@@ -623,14 +620,15 @@
     <MESSAGE value="optimize auth (not finished)" />
     <MESSAGE value="all basic pages refactored" />
     <MESSAGE value="finished USERS" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished USERS" />
+    <MESSAGE value="Add places and statuses read" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add places and statuses read" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>524</line>
+          <line>526</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -691,31 +689,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wtf/form/statuses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/queuesUpdate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/queuesCreate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wtf/form/queues.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="94" selection-end-column="116" />
         </state>
       </provider>
     </entry>
@@ -733,31 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wtf/form/createdEvents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="44" column="72" lean-forward="true" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv2/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31720">
           <caret line="1249" selection-start-line="1249" selection-end-line="1249" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wtf/form/events.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/createdEventsRead.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -790,13 +746,6 @@
     <entry file="das://ab479402-8042-4be2-880f-fedd938e8abb/schema/LEDOFF/table/SUPERUSER" />
     <entry file="file://$PROJECT_DIR$/templates/css/dashboard.css" />
     <entry file="file://$PROJECT_DIR$/templates/css/album.css" />
-    <entry file="file://$PROJECT_DIR$/wtf/form/users.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -884,13 +833,6 @@
         <state relative-caret-position="-216" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="90" selection-end-line="35" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/queues.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="730">
@@ -916,70 +858,112 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="168" column="27" selection-start-line="168" selection-start-column="27" selection-end-line="168" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/usersUpdate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/usersDelete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="150" column="41" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/usersRead.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="166" column="10" lean-forward="true" selection-end-line="193" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/statusesDelete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        <state relative-caret-position="768">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/queuesRead.html">
+    <entry file="file://$PROJECT_DIR$/templates/usersUpdate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        <state relative-caret-position="2952">
+          <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/authRegistration.html">
+    <entry file="file://$PROJECT_DIR$/templates/usersDelete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="176" column="24" lean-forward="true" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+        <state relative-caret-position="3600">
+          <caret line="150" column="41" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/usersRead.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1270">
+          <caret line="169" column="34" lean-forward="true" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/statusesRead.html">
+    <entry file="file://$PROJECT_DIR$/templates/placesRead.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="117" column="6" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+        <state relative-caret-position="96">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/authRegistration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wtf/form/statuses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wtf/form/users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wtf/form/events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wtf/form/createdEvents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wtf/form/places.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventsRead.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
           </folding>
@@ -988,31 +972,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="696">
+          <caret line="562" lean-forward="true" selection-start-line="562" selection-end-line="562" />
           <folding>
             <element signature="e#0#99#0" expanded="true" />
-            <marker date="1558378320000" expanded="true" signature="411:803" ph="..." />
-            <marker date="1558378320000" expanded="true" signature="4143:24725" ph="..." />
-            <marker date="1558378320000" expanded="true" signature="4959:4962" ph="..." />
+            <marker date="1558456442000" expanded="true" signature="411:803" ph="..." />
+            <marker date="1558456442000" expanded="true" signature="4143:24987" ph="..." />
+            <marker date="1558456442000" expanded="true" signature="4959:4962" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wtf/form/places.py">
+    <entry file="file://$PROJECT_DIR$/templates/statusesRead.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        <state relative-caret-position="-302">
+          <caret line="117" column="6" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/placesRead.html">
+    <entry file="file://$PROJECT_DIR$/templates/createdEventsRead.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
+        <state relative-caret-position="178">
+          <caret line="158" column="24" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wtf/form/queues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/queuesRead.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="175" selection-start-line="175" selection-end-line="175" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
           </folding>

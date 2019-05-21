@@ -20,9 +20,9 @@ class CreatedEventCreateForm(Form):
 
 
 class CreatedEventReadForm(Form):
-    select_place_id = StringField("Select created event with place id : ")
-    select_event_name = StringField("Select created event with event name : ")
-    select_date_creation_event = StringField("Select created event with date creation event : ")
+    select_place_id = StringField("Select created event with place id ")
+    select_event_name = StringField("Select created event with event name ")
+    select_date_creation_event = StringField("Select created event with date creation event ")
     submit = SubmitField("Select one or all created events")
 
 
@@ -57,9 +57,9 @@ class CreatedEventUpdateForm(Form):
 
 
 class CreatedEventDeleteForm(Form):
-    delete_place_id = StringField("Delete created event with place id : ", [validators.DataRequired("Required")])
-    delete_event_name = StringField("Delete created event with event name : ", [validators.DataRequired("Required")])
-    delete_date_creation_event = StringField("Delete created event with date creation event : ",
+    delete_place_id = StringField("Delete created event with place id ", [validators.DataRequired("Required")])
+    delete_event_name = StringField("Delete created event with event name ", [validators.DataRequired("Required")])
+    delete_date_creation_event = StringField("Delete created event with date creation event ",
                                              [validators.DataRequired("Required")])
 
     submit = SubmitField("Delete created event")

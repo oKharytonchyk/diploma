@@ -1,34 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Created events read</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .form-signin {
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+            margin: auto;
+        }
+
+        .form-label-group {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .form-label-group > input,
+        .form-label-group > label {
+            height: 3.125rem;
+            padding: .75rem;
+        }
+
+        .form-label-group > label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            margin-bottom: 0; /* Override default `<label>` margin */
+            line-height: 1.5;
+            color: #495057;
+            pointer-events: none;
+            cursor: text; /* Match the input under the label */
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            transition: all .1s ease-in-out;
+        }
+
+        .form-label-group input::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input:-ms-input-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input::-ms-input-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input::-moz-placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input::placeholder {
+            color: transparent;
+        }
+
+        .form-label-group input:not(:placeholder-shown) {
+            padding-top: 1.25rem;
+            padding-bottom: .25rem;
+        }
+
+        .form-label-group input:not(:placeholder-shown) ~ label {
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Fallback for Edge
+        -------------------------------------------------- */
+        @supports (-ms-ime-align: auto) {
+            .form-label-group > label {
+                display: none;
+            }
+
+            .form-label-group input::-ms-input-placeholder {
+                color: #777;
+            }
+        }
+
+        /* Fallback for IE
+        -------------------------------------------------- */
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .form-label-group > label {
+                display: none;
+            }
+
+            .form-label-group input:-ms-input-placeholder {
+                color: #777;
+            }
+        }
+    </style>
 </head>
 <body>
-<form action="/createdEventsRead" method="POST">
-    <a href="/">Home page</a><br>
-    <a href="/createdEvents">Created events</a><br><br><br>
-    {{createdEventForm.hidden_tag()}}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Home page</a>
+    <a class="navbar-brand" href="/createdEvents">Created events</a>
+</nav>
+<div class="container">
+    <div class="form-signin">
 
-    {{createdEventForm.select_place_id.label}}{{createdEventForm.select_place_id}}<br/>
-    {{createdEventForm.select_event_name.label}}{{createdEventForm.select_event_name}}<br/>
-    {{createdEventForm.select_date_creation_event.label}}{{createdEventForm.select_date_creation_event}}<br/>
+        <form class="container" action="/createdEventsRead" method="POST">
+            {{createdEventForm.hidden_tag()}}
+            <div class="form-label-group">
+                {{createdEventForm.select_place_id(class_="form-control",
+                placeholder='{{createdEventForm.select_place_id.label}}')}}
+                {{createdEventForm.select_place_id.label(for="select_place_id")}}
+            </div>
+            <div class="form-label-group">
+                {{createdEventForm.select_event_name(class_="form-control",
+                placeholder='{{createdEventForm.select_event_name.label}}')}}
+                {{createdEventForm.select_event_name.label(for="select_event_name")}}
+            </div>
+            <div class="form-label-group">
+                {{createdEventForm.select_date_creation_event(class_="form-control",
+                placeholder='{{createdEventForm.select_date_creation_event.label}}')}}
+                {{createdEventForm.select_date_creation_event.label(for="select_date_creation_event")}}
+            </div>
+            {{createdEventForm.submit(class_="btn btn-lg btn-success btn-block")}}
+        </form>
+    </div>
+    <br>
+    <br/>
+    <br/>
+    <div class="d-flex flex-column">
+        {%if selectedCreatedEvents != null %}
+        <h2>Places list :</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Place id</th>
+                    <th>Event name</th>
+                    <th>Date creation event</th>
+                </tr>
+                </thead>
+                <tbody>
+                {%for row,i in selectedCreatedEvents_info%}
+                <tr>
+                    <td>{{i+1}}</td>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                </tr>
+                {%endfor%}
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <br/>
+        {%endif%}
+        <!--@ok TODO либо этот эндиф опустить под </div>-->
+    </div>
+    <div>
+    </div>
 
-    {{createdEventForm.submit}}
-</form>
-
-<div>
-    Error list : {{createdEventForm.errors}}
-    <!--{%for error in createdEventForm.errors%}-->
-    <!--{{error}}-->
+    <!--<div>-->
+    <!--Events list :<br>-->
+    <!--{%for row in selectedCreatedEvents%}-->
+    <!--{{row}}<br>-->
     <!--{%endfor%}-->
+    <!--</div>-->
+
+    {%if error %}
+    <h2>Error list :</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>error</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--Error list : {{createdEventForm.errors}}-->
+            {%for error in createdEventForm.errors%}
+            <tr>
+                <!--@ok не факт шо пашет TODO-->
+                <td>{{error.index}}</td>
+                <td>{{error}}</td>
+            </tr>
+            {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    {%endif%}
 </div>
 
-<div>
-    Created events list :<br>
-    {%for row in selectedCreatedEvents%}
-    {{row}}<br>
-    {%endfor%}
-</div>
 </body>
 </html>

@@ -3,20 +3,20 @@ from wtforms import StringField, SubmitField, validators, SelectField
 
 
 class PlaceCreateForm(Form):
-    new_place_id = StringField("New place id : ",
+    new_place_id = StringField("New place id ",
                                [validators.DataRequired("Required"),
                                 validators.regexp('^\d{1,10}$', flags=0,
                                                   message='Please enter like this d{1,10}')])
-    new_address = StringField("New address : ",
+    new_address = StringField("New address ",
                               [validators.DataRequired("Required"),
                                validators.regexp('^[^";]{4,60}$', flags=0,
                                                  message='Please enter like this [^";]{4,60}')])
-    new_room_number = StringField("New room number : ",
+    new_room_number = StringField("New room number ",
                                   [validators.DataRequired("Required"),
                                    validators.regexp('^\d{3,5}$', flags=0,
                                                      message='Please enter like this d{3,5}')])
     # message=u'Please enter a number from 100 to 99999')])
-    new_schedule = StringField("New schedule : ",
+    new_schedule = StringField("New schedule ",
                                [validators.DataRequired("Required"),
                                 validators.regexp('^[0-2][0-9]:[0-2][0-9] [0-2][0-9]:[0-2][0-9]$',
                                                   flags=0,
@@ -33,24 +33,24 @@ class PlaceReadForm(Form):
 
 
 class PlaceUpdateForm(Form):
-    old_place_id = StringField("Old place id : ",
+    old_place_id = StringField("Old place id ",
                                [validators.DataRequired("Required"),
                                 validators.regexp('^\d{1,10}$', flags=0,
                                                   message='Please enter like this d{1,10}')])
-    new_place_id = StringField("New place id : ",
+    new_place_id = StringField("New place id ",
                                [validators.DataRequired("Required"),
                                 validators.regexp('^\d{1,10}$', flags=0,
                                                   message='Please enter like this d{1,10}')])
-    new_address = StringField("New address : ",
+    new_address = StringField("New address ",
                               [validators.DataRequired("Required"),
                                validators.regexp('^[^";]{4,60}$', flags=0,
                                                  message='Please enter like this [^";]{4,60}')])
-    new_room_number = StringField("New room number : ",
+    new_room_number = StringField("New room number ",
                                   [validators.DataRequired("Required"),
                                    validators.regexp('^\d{3,5}$', flags=0,
                                                      message='Please enter like this d{3,5}')])
     # message=u'Please enter a number from 100 to 99999')])
-    new_schedule = StringField("New schedule : ",
+    new_schedule = StringField("New schedule ",
                                [validators.DataRequired("Required"),
                                 validators.regexp('^[0-2][0-9]:[0-2][0-9] [0-2][0-9]:[0-2][0-9]$',
                                                   flags=0,
@@ -59,6 +59,6 @@ class PlaceUpdateForm(Form):
 
 
 class PlaceDeleteForm(Form):
-    delete_place_id = StringField("Delete place with id : ", [validators.DataRequired("Required")])
+    delete_place_id = StringField("Delete place with id ", [validators.DataRequired("Required")])
 
     submit = SubmitField("Delete place")

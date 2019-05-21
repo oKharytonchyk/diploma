@@ -363,7 +363,8 @@ def eventsRead():
                 var = event.get_events()
             else:
                 var = event.get_event(request.form['select_event'])
-            return render_template('eventsRead.html', selectedEvents=var, eventForm=form)
+            return render_template('eventsRead.html', selectedEvents=var, eventForm=form,
+                                   selectedEvents_info=zip(var, range(0, len(var))))
 
 
 @app.route('/eventsUpdate', methods=["GET", "POST"])
@@ -446,7 +447,8 @@ def createdEventsRead():
                                                                 request.form['select_event_name'],
                                                                 request.form['select_date_creation_event'])
 
-            return render_template('createdEventsRead.html', selectedCreatedEvents=var, createdEventForm=form)
+            return render_template('createdEventsRead.html', selectedCreatedEvents=var, createdEventForm=form,
+                                   selectedCreatedEvents_info=zip(var, range(0, len(var))))
 
 
 @app.route('/createdEventsUpdate', methods=["GET", "POST"])
@@ -556,7 +558,8 @@ def queuesRead():
                                                              request.form['select_event_name'],
                                                              request.form['select_date_creation_event'],
                                                              request.form['select_date_request_creation'])
-            return render_template('queuesRead.html', selectedQueues=var, queueForm=form)
+            return render_template('queuesRead.html', selectedQueues=var, queueForm=form,
+                                   selectedQueues_info=zip(var, range(0, len(var))))
 
 
 @app.route('/queuesUpdate', methods=["GET", "POST"])
