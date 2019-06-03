@@ -216,38 +216,38 @@ class Queue:
         var = self.__cursor.execute(query)
         return var.fetchall()
 
-    def get_queues_1(self, select_status):
-        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:STATUS) )'
-        var = self.__cursor.execute(query, STATUS=select_status)
+    def get_queues_1(self, select_place_id):
+        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:PLACE_ID) )'
+        var = self.__cursor.execute(query, PLACE_ID=select_place_id)
         return var.fetchall()
 
-    def get_queues_2(self, select_status, select_user_login):
-        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:STATUS, :USER_LOGIN) )'
-        var = self.__cursor.execute(query, STATUS=select_status, USER_LOGIN=select_user_login)
+    def get_queues_2(self, select_place_id, select_user_login):
+        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:PLACE_ID, :USER_LOGIN) )'
+        var = self.__cursor.execute(query, PLACE_ID=select_place_id, USER_LOGIN=select_user_login)
         return var.fetchall()
 
-    def get_queues_3(self, select_status, select_user_login, select_place_id):
-        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:STATUS, :USER_LOGIN, :PLACE_ID) )'
-        var = self.__cursor.execute(query, STATUS=select_status, USER_LOGIN=select_user_login, PLACE_ID=select_place_id)
+    def get_queues_3(self, select_place_id, select_user_login, select_status):
+        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:PLACE_ID, :USER_LOGIN, :STATUS) )'
+        var = self.__cursor.execute(query, PLACE_ID=select_place_id, USER_LOGIN=select_user_login, STATUS=select_status)
         return var.fetchall()
 
-    def get_queues_4(self, select_status, select_user_login, select_place_id, select_event_name):
-        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:STATUS, :USER_LOGIN, :PLACE_ID, :EVENT_NAME) )'
-        var = self.__cursor.execute(query, STATUS=select_status, USER_LOGIN=select_user_login, PLACE_ID=select_place_id,
+    def get_queues_4(self, select_place_id, select_user_login, select_status, select_event_name):
+        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:PLACE_ID, :USER_LOGIN, :STATUS, :EVENT_NAME) )'
+        var = self.__cursor.execute(query, PLACE_ID=select_place_id, USER_LOGIN=select_user_login, STATUS=select_status,
                                     EVENT_NAME=select_event_name)
         return var.fetchall()
 
-    def get_queues_5(self, select_status, select_user_login, select_place_id, select_event_name,
+    def get_queues_5(self, select_place_id, select_user_login, select_status, select_event_name,
                      select_date_creation_event):
-        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:STATUS, :USER_LOGIN, :PLACE_ID, :EVENT_NAME, :DATE_CREATION_EVENT) )'
-        var = self.__cursor.execute(query, STATUS=select_status, USER_LOGIN=select_user_login, PLACE_ID=select_place_id,
+        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:PLACE_ID, :USER_LOGIN, :STATUS, :EVENT_NAME, :DATE_CREATION_EVENT) )'
+        var = self.__cursor.execute(query, PLACE_ID=select_place_id, USER_LOGIN=select_user_login, STATUS=select_status,
                                     EVENT_NAME=select_event_name, DATE_CREATION_EVENT=select_date_creation_event)
         return var.fetchall()
 
-    def get_queues_6(self, select_status, select_user_login, select_place_id, select_event_name,
+    def get_queues_6(self, select_place_id, select_user_login, select_status, select_event_name,
                      select_date_creation_event, select_date_request_creation):
-        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:STATUS, :USER_LOGIN, :PLACE_ID, :EVENT_NAME, :DATE_CREATION_EVENT, :DATE_REQUEST_CREATION) )'
-        var = self.__cursor.execute(query, STATUS=select_status, USER_LOGIN=select_user_login, PLACE_ID=select_place_id,
+        query = 'select * from table ( QUEUE_PACKAGE.GET_QUEUES(:PLACE_ID, :USER_LOGIN, :STATUS, :EVENT_NAME, :DATE_CREATION_EVENT, :DATE_REQUEST_CREATION) )'
+        var = self.__cursor.execute(query, PLACE_ID=select_place_id, USER_LOGIN=select_user_login, STATUS=select_status,
                                     EVENT_NAME=select_event_name, DATE_CREATION_EVENT=select_date_creation_event,
                                     DATE_REQUEST_CREATION=select_date_request_creation)
         return var.fetchall()

@@ -126,8 +126,8 @@
         <form class="container" action="/queuesRead" method="POST">
             {{queueForm.hidden_tag()}}
             <div class="form-label-group">
-                {{queueForm.select_status(class_="form-control", placeholder='{{queueForm.select_status.label}}')}}
-                {{queueForm.select_status.label(for="select_status")}}
+                {{queueForm.select_place_id(class_="form-control", placeholder='{{queueForm.select_place_id.label}}')}}
+                {{queueForm.select_place_id.label(for="select_place_id")}}
             </div>
             <div class="form-label-group">
                 {{queueForm.select_user_login(class_="form-control",
@@ -135,8 +135,8 @@
                 {{queueForm.select_user_login.label(for="select_user_login")}}
             </div>
             <div class="form-label-group">
-                {{queueForm.select_place_id(class_="form-control", placeholder='{{queueForm.select_place_id.label}}')}}
-                {{queueForm.select_place_id.label(for="select_place_id")}}
+                {{queueForm.select_status(class_="form-control", placeholder='{{queueForm.select_status.label}}')}}
+                {{queueForm.select_status.label(for="select_status")}}
             </div>
             <div class="form-label-group">
                 {{queueForm.select_event_name(class_="form-control",
@@ -167,9 +167,9 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Status</th>
-                    <th>User login</th>
                     <th>Place id</th>
+                    <th>User login</th>
+                    <th>Status</th>
                     <th>Event name</th>
                     <th>Date creation event</th>
                     <th>Date request creation</th>

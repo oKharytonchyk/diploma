@@ -524,37 +524,37 @@ def queuesRead():
         else:
             queue = Queue()
             queue.__enter__()
-            if request.form['select_status'] == "":
+            if request.form['select_place_id'] == "":
                 var = queue.get_queues_0()
             else:
                 if request.form['select_user_login'] == "":
-                    var = queue.get_queues_1(request.form['select_status'])
+                    var = queue.get_queues_1(request.form['select_place_id'])
                 else:
-                    if request.form['select_place_id'] == "":
-                        var = queue.get_queues_2(request.form['select_status'],
+                    if request.form['select_status'] == "":
+                        var = queue.get_queues_2(request.form['select_place_id'],
                                                  request.form['select_user_login'])
                     else:
                         if request.form['select_event_name'] == "":
-                            var = queue.get_queues_3(request.form['select_status'],
+                            var = queue.get_queues_3(request.form['select_place_id'],
                                                      request.form['select_user_login'],
-                                                     request.form['select_place_id'])
+                                                     request.form['select_status'])
                         else:
                             if request.form['select_date_creation_event'] == "":
-                                var = queue.get_queues_4(request.form['select_status'],
+                                var = queue.get_queues_4(request.form['select_place_id'],
                                                          request.form['select_user_login'],
-                                                         request.form['select_place_id'],
+                                                         request.form['select_status'],
                                                          request.form['select_event_name'])
                             else:
                                 if request.form['select_date_request_creation'] == "":
-                                    var = queue.get_queues_5(request.form['select_status'],
+                                    var = queue.get_queues_5(request.form['select_place_id'],
                                                              request.form['select_user_login'],
-                                                             request.form['select_place_id'],
+                                                             request.form['select_status'],
                                                              request.form['select_event_name'],
                                                              request.form['select_date_creation_event'])
                                 else:
-                                    var = queue.get_queues_6(request.form['select_status'],
+                                    var = queue.get_queues_6(request.form['select_place_id'],
                                                              request.form['select_user_login'],
-                                                             request.form['select_place_id'],
+                                                             request.form['select_status'],
                                                              request.form['select_event_name'],
                                                              request.form['select_date_creation_event'],
                                                              request.form['select_date_request_creation'])

@@ -33,9 +33,9 @@ class QueueCreateForm(Form):
 
 
 class QueueReadForm(Form):
+    select_place_id = StringField("Select queue with place id ")
     select_status = StringField("Select queue with status ")
     select_user_login = StringField("Select queue with user login ")
-    select_place_id = StringField("Select queue with place id ")
     select_event_name = StringField("Select queue with event name ")
     select_date_creation_event = StringField("Select queue with date creation event ")
     select_date_request_creation = StringField("Select queue with date request creation ")

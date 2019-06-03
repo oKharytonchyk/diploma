@@ -125,8 +125,9 @@
         <form class="container" action="/queuesDelete" method="POST">
             {{queueForm.hidden_tag()}}
             <div class="form-label-group">
-                {{queueForm.delete_status(class_="form-control", placeholder='{{queueForm.delete_status.label}}')}}
-                {{queueForm.delete_status.label(for="delete_status")}}
+                {{queueForm.delete_place_id(class_="form-control",
+                placeholder='{{queueForm.delete_place_id.label}}')}}
+                {{queueForm.delete_place_id.label(for="delete_place_id")}}
             </div>
             <div class="form-label-group">
                 {{queueForm.delete_user_login(class_="form-control",
@@ -134,9 +135,8 @@
                 {{queueForm.delete_user_login.label(for="delete_user_login")}}
             </div>
             <div class="form-label-group">
-                {{queueForm.delete_place_id(class_="form-control",
-                placeholder='{{queueForm.delete_place_id.label}}')}}
-                {{queueForm.delete_place_id.label(for="delete_place_id")}}
+                {{queueForm.delete_status(class_="form-control", placeholder='{{queueForm.delete_status.label}}')}}
+                {{queueForm.delete_status.label(for="delete_status")}}
             </div>
             <div class="form-label-group">
                 {{queueForm.delete_event_name(class_="form-control",
