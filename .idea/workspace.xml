@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0888ad7d-7c3d-41e0-8e9f-6685531696f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/createdEventsCreate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createdEventsCreate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eventsCreate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventsCreate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/placesCreate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/placesCreate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/queuesCreate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/queuesCreate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/statusesCreate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/statusesCreate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authRegistration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/queuesUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/queuesUpdate.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/FLASKSESSION2$func.coverage" NAME="func Coverage Results" MODIFIED="1543839127864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wtf" />
-    <SUITE FILE_PATH="coverage/FLASKSESSION2$main.coverage" NAME="main Coverage Results" MODIFIED="1558477241604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wtf" />
+    <SUITE FILE_PATH="coverage/FLASKSESSION2$main.coverage" NAME="main Coverage Results" MODIFIED="1560460722754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wtf" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -73,8 +70,8 @@
     <session id="-1750186156">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="33" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="34" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.13" value="3" />
@@ -90,7 +87,7 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -172,7 +169,7 @@
         <entry file="file://$PROJECT_DIR$/templates/placesCreate.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3072">
-              <caret line="128" column="36" selection-end-line="183" selection-end-column="7" />
+              <caret line="128" column="36" selection-end-line="159" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -180,8 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/eventsCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="137" column="47" lean-forward="true" selection-end-line="147" selection-end-column="7" />
+            <state relative-caret-position="3288">
+              <caret line="137" column="47" selection-end-line="147" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -192,7 +189,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/createdEventsCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="3456">
               <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
             </state>
           </provider>
@@ -201,11 +198,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/queuesCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="336">
+              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -213,8 +207,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/placesDelete.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3768">
-              <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="158" selection-end-column="13" />
+            <state relative-caret-position="3528">
+              <caret line="147" column="7" selection-start-line="147" selection-start-column="7" selection-end-line="147" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -241,7 +235,7 @@
         <entry file="file://$PROJECT_DIR$/templates/usersDelete.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="118" column="67" selection-end-line="171" selection-end-column="7" />
+              <caret line="118" column="67" selection-end-line="147" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
               </folding>
@@ -374,7 +368,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -408,6 +401,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -600,7 +594,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5105008" visible="true" weight="0.17110874" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5105008" visible="true" weight="0.17270789" />
       <window_info id="Favorites" order="1" sideWeight="0.48949918" side_tool="true" weight="0.17537314" />
       <window_info id="Structure" order="2" sideWeight="0.48698482" side_tool="true" weight="0.20042644" />
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.329718" />
@@ -719,13 +713,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbSrc:///6347aca4/ab479402-8042-4be2-880f-fedd938e8abb/schema/LEDOFF/package/USER_PACKAGE/body/USER_PACKAGE.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbSrc:///6347aca4/ab479402-8042-4be2-880f-fedd938e8abb/schema/LEDOFF/package/USER_PACKAGE/body/USER_PACKAGE.sql" />
     <entry file="file://$PROJECT_DIR$/templates/css/jumbotron.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -967,9 +955,6 @@
           <caret line="562" selection-start-line="562" selection-end-line="562" />
           <folding>
             <element signature="e#0#99#0" expanded="true" />
-            <marker date="1558456442000" expanded="true" signature="411:803" ph="..." />
-            <marker date="1558456442000" expanded="true" signature="4143:24987" ph="..." />
-            <marker date="1558456442000" expanded="true" signature="4959:4962" ph="..." />
           </folding>
         </state>
       </provider>
@@ -994,14 +979,31 @@
     <entry file="file://$PROJECT_DIR$/templates/placesCreate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3072">
-          <caret line="128" column="36" selection-end-line="183" selection-end-column="7" />
+          <caret line="128" column="36" selection-end-line="159" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventsCreate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3288">
+          <caret line="137" column="47" selection-end-line="147" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/createdEventsCreate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3456">
+          <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/placesDelete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3768">
-          <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="158" selection-end-column="13" />
+        <state relative-caret-position="3528">
+          <caret line="147" column="7" selection-start-line="147" selection-start-column="7" selection-end-line="147" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1022,37 +1024,17 @@
     <entry file="file://$PROJECT_DIR$/templates/usersDelete.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="118" column="67" selection-end-line="171" selection-end-column="7" />
+          <caret line="118" column="67" selection-end-line="147" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eventsCreate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="137" column="47" lean-forward="true" selection-end-line="147" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/createdEventsCreate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/queuesCreate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#1;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="336">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>

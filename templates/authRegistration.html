@@ -179,7 +179,7 @@
         <div class="alert alert-danger" style="text-align: center; align-self: center; width: 33%;">
             {% for field in regForm.errors %}
             {% for error in regForm.errors[field] %}
-            {{error}}<br>
+            {{field}}: {{error}}<br>
             {% endfor %}
             {% endfor %}
         </div>
@@ -188,4 +188,3 @@
 </div>
 </body>
 </html>
-
